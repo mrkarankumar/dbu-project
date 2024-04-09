@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div
+        style="background-color: rgb(232, 249, 249); height: 300px; width: 380px; margin-left: 30%;box-shadow: inset 5px 5px 8px rgb(194, 194, 198), inset -5px -5px 8px rgb(194, 194, 198);">
+        <h2 style="margin-left: 30%;">Form Validation</h2>
+        <form id="myForm" onsubmit="return validateForm()" style="margin-left: 30%;">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <span id="nameError" class="error"></span><br>
+
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <span id="emailError" class="error"></span><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br>
+            <span id="passwordError" class="error"></span><br>
+
+            <input type="submit" value="Submit"
+                style="background-color: blue; margin-left: 35px; width: 100px;height: 35px;color: #ffff;">
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var nameError = document.getElementById("nameError");
+            var emailError = document.getElementById("emailError");
+            var passwordError = document.getElementById("passwordError");
+            var isValid = true;
+
+            // Name validation
+            if (name == "") {
+                nameError.textContent = "Name is required";
+                isValid = false;
+            } else {
+                nameError.textContent = "";
+            }
+
+            // Email validation
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email.match(emailPattern)) {
+                emailError.textContent = "Invalid email format";
+                isValid = false;
+            } else {
+                emailError.textContent = "";
+            }
+
+            // Password validation
+            if (password == "") {
+                passwordError.textContent = "Password is required";
+                isValid = false;
+            } else {
+                passwordError.textContent = "";
+            }
+
+            return isValid;
+        }
+    </script>
+
+</body>
+
+</html>

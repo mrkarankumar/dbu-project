@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Image Gallery</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+
+    <marquee>
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="/th (1).jpeg" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+        <img src="/th (2).jpeg" alt="Image 2">
+    </div>
+    <div class="gallery-item">
+        <img src="/th.jpeg" alt="Image 3">
+    </div>
+    <div class="gallery-item">
+        <img src="/th (1).jpeg" alt="Image 4">
+    </div>
+    <div class="gallery-item">
+        <img src="/th (2).jpeg" alt="Image 5">
+    </div>
+ 
+    <!-- Add more images as needed -->
+</div>
+</marquee>
+
+</body>
+</html>

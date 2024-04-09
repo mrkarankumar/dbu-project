@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asynchronous Data Fetching</title>
+</head>
+<body>
+
+<div id="data-container">
+    <!-- Data will be displayed here -->
+</div>
+
+<script>
+// Function to make an asynchronous request
+async function fetchData(url) {
+    try {
+        const response = await fetch(url); // Fetch data from the provided URL
+        const data = await response.json(); // Extract JSON from the response
+        return data; // Return the JSON data
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        throw error; // Throw the error for handling
+    }
+}
+
+
+
+// Function to display fetched data
+function displayData(data) {
+    const dataContainer = document.getElementById('data-container');
+    dataContainer.innerHTML = ''; // Clear previous content
+
+    // Create a new <ul> element to hold the data
+    const ul = document.createElement('ul');
+
+    // Loop through the data and create <li> elements to display each item
+    data.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item.name; // Assuming each item has a 'name' property
+        ul.appendChild(li); // Append each <li> to the <ul>
+    });
+
+    // Append the <ul> to the data container
+    dataContainer.appendChild(ul);
+}
+
+
+
+// Call fetchData function with the URL and handle the returned data
+const apiUrl = 'https://jsonplaceholder.typicode.com/users'; // Example API URL
+fetchData(apiUrl)
+    .then(data => {
+        // Display the fetched data
+        displayData(data);
+    })
+    .catch(error => {
+        // Handle errors if any
+        console.error('Error displaying data:', error);
+    });
+
+    
+</script>
+
+</body>
+</html>

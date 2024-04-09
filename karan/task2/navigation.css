@@ -1,0 +1,125 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+     background-color: rgb(231, 228, 218); 
+  }
+  
+  .karan ul {
+    list-style: none;
+  }
+  .karan ul li {
+     background-color: red; 
+    color: white;
+    border: 1px solid white;
+     height: 55px; 
+      width: 106px;  
+     float: left; 
+    border-radius: 12px 0px 12px 0px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 55px;
+    position: relative;
+  }
+  .karan ul li ul li {
+    border: 1px solid white;
+    background-color: rgb(255, 0, 187);
+    border-radius: 12px 0px 12px 0px;
+  }
+  
+  .karan ul li ul li ul li {
+    background-color: rgb(32, 202, 13);
+    border: 1px solid white;
+    border-radius: 12px 0px 12px 0px;
+  }
+  .karan ul li:hover {
+    background-color: blue;
+    border-radius: 12px 0px 12px 0px;
+  }
+  
+  .karan ul ul {
+    display: none;
+    position: absolute;
+  }
+  .karan ul li:hover ul {
+    display: block;
+  }
+  .karan ul li ul li :hover {
+    background-color: rgb(224, 62, 8);
+    color: white;
+    border-radius: 12px 0px 12px 0px;
+  }
+  
+  .karan ul ul ul {
+    margin-left: 106px;
+    margin-top: -53px;
+  }
+  
+  .karan ul li :hover {
+    background-color: #00ff59;
+    border-radius: 12px 0px 12px 0px;
+  }
+  .karan ul li:hover ul li ul {
+    display: none;
+  
+    border-radius: 12px 0px 12px 0px;
+  }
+  .karan ul li ul li:hover ul {
+    display: block;
+  }
+  
+  .karan ul li:hover ul li ul li ul {
+    display: none;
+  
+    border-radius: 12px 0px 12px 0px;
+  }
+  .karan ul li ul li ul li:hover ul {
+    display: block;
+  }
+  
+  .karan ul li:hover ul li ul li ul li ul {
+    display: none;
+  
+    border-radius: 12px 0px 12px 0px;
+  }
+  .karan ul li ul li ul li ul li:hover ul {
+    display: block;
+  }
+  .karan ul li ul li ul li ul li:hover  {
+    background-color: aliceblue;
+  }
+  .karan ul li ul li ul li ul li:hover  {
+    background-color: black;
+  }
+  .karan ul li ul li ul li ul li ul li:hover  {
+    background-color: rgb(236, 21, 103);
+  }
+  
+  
+  ul li ul li:nth-child(1) {
+    background-color: rgb(255, 217, 0);
+  }
+  
+  ul li ul li:nth-child(3) {
+    background-color: rgb(235, 46, 13);
+  }
+  ul li ul li:nth-child(2) {
+    background-color: rgb(0, 255, 145);
+  }
+  
+  ul li ul li:nth-child(5) {
+    background-color: rgb(0, 255, 42);
+  }
+  
+  ul li ul li ul li:nth-child(1) {
+    background-color: rgb(34, 0, 255);
+  }
+  
+  ul li ul li ul li:nth-child(3) {
+    background-color: rgb(13, 235, 217);
+  }
+  
+  ul li ul li ul li:nth-child(5) {
+    background-color: rgb(149, 0, 255);
+  }
+  

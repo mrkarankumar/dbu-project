@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>flex shrink</title>
+    <style>
+      #container {
+        border: 2px solid black;
+        height: 600px;
+        width: 500px;
+         display: flex; 
+      }
+
+      .dev {
+        text-align: center;
+        padding: 20px;
+        margin: 10px;
+        height: 30px;
+        width: 100px;
+      }
+
+      #firstdiv {
+        background-color: pink;
+      }
+
+      #secdiv {
+        background-color: blue;
+      }
+
+      #thirddiv {
+        background-color: red;
+        flex: 0 3 0;
+      }
+
+      #fourthdiv {
+        background-color: green;
+      }
+
+      #fifthdiv {
+        background-color: orange;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="firstdiv" class="dev">1</div>
+      <div id="secdiv" class="dev">2</div>
+      <div id="thirddiv" class="dev">3</div>
+
+      <div id="fourthdiv" class="dev">4</div>
+
+      <div id="fifthdiv" class="dev">5</div>
+    </div>
+  </body>
+</html>

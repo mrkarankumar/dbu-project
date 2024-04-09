@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Two-Dimensional Layout</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-rows: 100px 200px 100px; /* Three rows with specified heights */
+      grid-template-columns: 1fr 2fr 1fr; /* Three columns with flexible widths */
+      gap: 10px; /* Gap between grid cells */
+      height: 400px; /* Set a fixed height for demonstration */
+    }
+
+    .item {
+      background-color: #ddd;
+      border: 1px solid #999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    /* Custom styling for specific items */
+    .item:nth-child(2) {
+      background-color: rgb(242, 242, 17);
+    }
+
+    .item:nth-child(5) {
+      background-color: rgb(4, 4, 239);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+  </div>
+</body>
+</html>
